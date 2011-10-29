@@ -14,7 +14,7 @@ module OmniAuth
           :authorize_path => '/service/auth/authorize',
           :realm => 'OmniAuth',
           :request_token_path => '/service/auth/request_token',
-          :site => 'http://www.douban.com',
+          :site => 'http://www.douban.com'
         }
       end
 
@@ -34,7 +34,7 @@ module OmniAuth
           :image => raw_info['link'].find{|l| l['@rel'] == 'icon'}['@href'],
           :description => raw_info['content']['$t'],
           :urls => {
-            'Douban' => raw_info['link'].find{|l| l['@rel'] == 'alternate'}['@href'],
+            'Douban' => raw_info['link'].find{|l| l['@rel'] == 'alternate'}['@href']
           }
         }
       end
